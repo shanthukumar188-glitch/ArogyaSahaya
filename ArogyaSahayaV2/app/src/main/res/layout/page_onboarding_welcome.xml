@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="32dp" android:background="@drawable/bg_header_gradient">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="🌿" android:textSize="90sp" android:layout_marginBottom="24dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Arogya Sahaya" android:textSize="38sp" android:textStyle="bold"
+        android:textColor="#FFFFFF" android:gravity="center" android:layout_marginBottom="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Your AI-Powered Digital Health Companion" android:textSize="18sp"
+        android:textColor="#CCFFFFFF" android:gravity="center" android:layout_marginBottom="28dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="#1AFFFFFF" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="💊  Zero-error medicine reminders" android:textSize="16sp" android:textColor="#EEFFFFFF" android:layout_marginBottom="10dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📊  Daily vital sign tracking" android:textSize="16sp" android:textColor="#EEFFFFFF" android:layout_marginBottom="10dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🤖  AI voice health assistant" android:textSize="16sp" android:textColor="#EEFFFFFF" android:layout_marginBottom="10dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🚨  One-tap emergency SOS" android:textSize="16sp" android:textColor="#EEFFFFFF"/>
+    </LinearLayout>
+</LinearLayout>

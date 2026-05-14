@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_radius_sm">10dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="btn_height">56dp</dimen>
+    <dimen name="text_sm">15sp</dimen>
+    <dimen name="text_md">17sp</dimen>
+    <dimen name="text_lg">20sp</dimen>
+    <dimen name="text_xl">24sp</dimen>
+    <dimen name="text_xxl">30sp</dimen>
+    <dimen name="bottom_nav_height">72dp</dimen>
+    <dimen name="sos_btn_size">200dp</dimen>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_voice_header" android:padding="20dp" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🤖 Arogya Mitra" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvWelcome" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Your AI Health Assistant" android:textColor="#CCFFFFFF" android:textSize="14sp" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <!-- Mic + Status -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center" android:paddingVertical="24dp">
+
+                <!-- Ripple Ring -->
+                <FrameLayout android:layout_width="180dp" android:layout_height="180dp" android:gravity="center">
+                    <View android:id="@+id/micRipple" android:layout_width="160dp" android:layout_height="160dp"
+                        android:layout_gravity="center" android:background="@drawable/bg_mic_ripple" android:visibility="gone"/>
+                    <View android:id="@+id/waveformView" android:layout_width="140dp" android:layout_height="140dp"
+                        android:layout_gravity="center" android:background="@drawable/bg_waveform" android:visibility="gone"/>
+                    <ImageButton android:id="@+id/btnMic"
+                        android:layout_width="120dp" android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_mic"
+                        android:background="@drawable/bg_mic_button"
+                        android:tint="#FFFFFF"
+                        android:padding="28dp"
+                        android:elevation="8dp"
+                        android:contentDescription="Start voice input"/>
+                </FrameLayout>
+
+                <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Tap the mic to ask a health question" android:textSize="15sp"
+                    android:textColor="@color/text_secondary" android:gravity="center" android:layout_marginTop="16dp"/>
+
+                <ProgressBar android:id="@+id/progressVoice" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:visibility="gone" android:indeterminateTint="@color/primary"/>
+
+                <Button android:id="@+id/btnStop" android:layout_width="wrap_content" android:layout_height="44dp"
+                    android:text="⏹ Stop" android:textSize="14sp"
+                    android:backgroundTint="@color/sos_red" android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp" android:visibility="gone"/>
+            </LinearLayout>
+
+            <!-- Current Query Bubble -->
+            <TextView android:id="@+id/tvCurrentQuery"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_bubble_user" android:padding="14dp"
+                android:textSize="16sp" android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" android:visibility="gone"/>
+
+            <!-- AI Response Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardResponse"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" android:visibility="gone"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/primary_surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🤖" android:textSize="18sp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Arogya Mitra" android:textSize="13sp" android:textStyle="bold" android:textColor="@color/primary"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvResponse" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textSize="16sp" android:textColor="@color/text_primary" android:lineSpacingMultiplier="1.4"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Quick Questions -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Quick Questions" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroup"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" app:chipSpacingVertical="8dp"/>
+
+            <!-- History -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                <TextView android:id="@+id/tvHistoryLabel" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Recent Conversations"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text_primary" android:visibility="gone"/>
+                <Button android:id="@+id/btnClearHistory" android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Clear" android:textSize="12sp"
+                    android:backgroundTint="@color/surface_variant" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerHistory"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- API Key Banner -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#FFF8E1" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="⚙️ Add your Gemini API key in VoiceAssistantService.kt for full AI responses. Offline mode active."
+            android:textSize="11sp" android:textColor="#795548" android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

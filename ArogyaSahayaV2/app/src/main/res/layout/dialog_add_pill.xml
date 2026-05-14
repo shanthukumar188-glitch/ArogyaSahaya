@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Medicine Name *" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etPillName" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. Metformin" android:textSize="17sp" android:inputType="textCapWords"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dosage" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etDosage" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. 500mg, 1 tablet" android:textSize="17sp"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Instructions" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etInstructions" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. After food with water" android:textSize="15sp"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Medicine Type" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spinnerPillType" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginBottom="14dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Current Stock (tablets/units)" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etStock" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="30" android:textSize="17sp" android:inputType="number"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="When to take:" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+        <CheckBox android:id="@+id/cbMorning" android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="🌅  Morning" android:textSize="16sp" android:buttonTint="@color/morning_color"/>
+        <CheckBox android:id="@+id/cbAfternoon" android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="☀️  Afternoon" android:textSize="16sp" android:buttonTint="@color/afternoon_color"/>
+        <CheckBox android:id="@+id/cbNight" android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="🌙  Night" android:textSize="16sp" android:buttonTint="@color/night_color"/>
+    </LinearLayout>
+</ScrollView>

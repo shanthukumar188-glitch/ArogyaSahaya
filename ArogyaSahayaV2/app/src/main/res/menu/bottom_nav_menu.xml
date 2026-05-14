@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"      android:icon="@drawable/ic_home"   android:title="Home"/>
+    <item android:id="@+id/pillFragment"      android:icon="@drawable/ic_pill"   android:title="Medicines"/>
+    <item android:id="@+id/vitalsFragment"    android:icon="@drawable/ic_vitals" android:title="Vitals"/>
+    <item android:id="@+id/voiceFragment"     android:icon="@drawable/ic_mic"    android:title="AI Help"/>
+    <item android:id="@+id/emergencyFragment" android:icon="@drawable/ic_sos"    android:title="SOS"/>
+</menu>

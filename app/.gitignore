@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+
+# Android Studio
+.local.properties
+.cxx/
+.externalNativeBuild/
+
+# Generated files
+captures/
+
+# IDE files
+*.iml
+*.ipr
+*.iws
+
+# Output packages
+*.apk
+*.ap_
+*.aab
+
+# NDK
+obj/
+*.so

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/accent" android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🏥 ASHA Connect" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="#CCFFFFFF" android:textSize="13sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="No upcoming events." android:textSize="17sp" android:textColor="@color/text_hint"
+            android:gravity="center" android:padding="32dp" android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerEvents"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:padding="8dp" android:clipToPadding="false"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddEvent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:text="+ Add Event" android:textSize="15sp"
+        app:backgroundTint="@color/accent" android:textColor="#FFFFFF"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

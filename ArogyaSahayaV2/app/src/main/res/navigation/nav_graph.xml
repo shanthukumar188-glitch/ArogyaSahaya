@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment android:id="@+id/homeFragment"     android:name="com.arogya.sahaya.ui.home.HomeFragment"      android:label="Home"/>
+    <fragment android:id="@+id/pillFragment"     android:name="com.arogya.sahaya.ui.pills.PillFragment"     android:label="Medicines"/>
+    <fragment android:id="@+id/vitalsFragment"   android:name="com.arogya.sahaya.ui.vitals.VitalsFragment"  android:label="Vitals"/>
+    <fragment android:id="@+id/ashaFragment"     android:name="com.arogya.sahaya.ui.asha.AshaFragment"      android:label="ASHA"/>
+    <fragment android:id="@+id/emergencyFragment" android:name="com.arogya.sahaya.ui.emergency.EmergencyFragment" android:label="SOS"/>
+    <fragment android:id="@+id/voiceFragment"    android:name="com.arogya.sahaya.ui.voice.VoiceFragment"   android:label="AI Help"/>
+    <fragment android:id="@+id/profileFragment"  android:name="com.arogya.sahaya.ui.profile.ProfileFragment" android:label="Profile"/>
+</navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Event Title *" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etTitle" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. Village Health Camp" android:textSize="17sp" android:inputType="textCapWords"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Location" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etLocation" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. Gram Panchayat Hall" android:textSize="17sp"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Organizer / ASHA Worker" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etOrganizer" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. ASHA Worker Meena" android:textSize="17sp"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Time" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/etTime" android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="e.g. 10:00 AM" android:textSize="17sp"
+            android:background="@drawable/bg_edittext" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content" android:layout_height="44dp"
+                android:text="📅 Pick Date" android:textSize="14sp"
+                android:backgroundTint="@color/primary" android:textColor="#FFFFFF" android:layout_marginEnd="12dp"/>
+            <TextView android:id="@+id/tvSelectedDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Not selected" android:textSize="15sp" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Event Type" android:textSize="13sp" android:textColor="@color/text_hint" android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spinnerType" android:layout_width="match_parent" android:layout_height="52dp"/>
+    </LinearLayout>
+</ScrollView>

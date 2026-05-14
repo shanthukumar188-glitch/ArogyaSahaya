@@ -1,0 +1,5 @@
+-keep class com.arogya.sahaya.data.model.** { *; }
+-keepattributes *Annotation*
+-keep class com.github.mikephil.charting.** { *; }
+-dontwarn okhttp3.**
+-keep class okhttp3.** { *; }

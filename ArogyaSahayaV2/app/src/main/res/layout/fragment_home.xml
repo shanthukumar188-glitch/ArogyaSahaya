@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tvGreeting" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Good Morning 🙏" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvSubtitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Stay healthy, stay happy" android:textColor="#CCFFFFFF" android:textSize="14sp" android:layout_marginTop="2dp"/>
+                    <TextView android:id="@+id/tvDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="#AAFFFFFF" android:textSize="13sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+                <!-- Voice AI Button -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="52dp" android:layout_height="52dp"
+                    app:cardCornerRadius="26dp" app:cardElevation="4dp" app:cardBackgroundColor="#33FFFFFF">
+                    <ImageButton android:id="@+id/btnVoiceAssistant"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:src="@drawable/ic_mic" android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="#FFFFFF" android:contentDescription="Voice AI"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Adherence -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Weekly Adherence" android:textColor="#CCFFFFFF" android:textSize="13sp"/>
+                <TextView android:id="@+id/tvAdherenceValue" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="100%" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+                <TextView android:id="@+id/tvAdherenceLabel" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Excellent 🌟" android:textColor="#AAFFFFFF"
+                    android:textSize="12sp" android:layout_marginStart="6dp"/>
+            </LinearLayout>
+            <ProgressBar android:id="@+id/progressAdherence"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="8dp"
+                android:layout_marginTop="6dp" android:max="100" android:progress="100"
+                android:progressTint="#A5D6A7" android:progressBackgroundTint="#33FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Content Padding -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Vitals Quick Row -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Latest Vitals" android:textSize="17sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/surface">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="❤️" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvBpValue" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="--/--" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/sos_red" android:layout_marginTop="4dp"/>
+                        <TextView android:id="@+id/tvBpStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="mmHg" android:textSize="11sp" android:textColor="@color/text_hint"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginHorizontal="6dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/surface">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💓" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvHrValue" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="--" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/primary" android:layout_marginTop="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="bpm" android:textSize="11sp" android:textColor="@color/text_hint"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="6dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/surface">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🩸" android:textSize="24sp"/>
+                        <TextView android:id="@+id/tvGlucoseValue" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="--" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/accent" android:layout_marginTop="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="mg/dL" android:textSize="11sp" android:textColor="@color/text_hint"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Medicines Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardPills"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="4dp" android:layout_height="48dp"
+                        android:background="@color/primary" android:layout_marginEnd="14dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💊" android:textSize="32sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="My Medicines" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                        <TextView android:id="@+id/tvPillSummary" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Loading..." android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" android:tint="@color/primary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Vitals Full Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardVitals"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="4dp" android:layout_height="48dp"
+                        android:background="@color/status_info" android:layout_marginEnd="14dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📊" android:textSize="32sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Vital Log" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="BP • Heart Rate • Glucose • 7-Day Trends" android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" android:tint="@color/status_info"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ASHA Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardAsha"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="4dp" android:layout_height="48dp"
+                        android:background="@color/accent" android:layout_marginEnd="14dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏥" android:textSize="32sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="ASHA Connect" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Upcoming health camps &amp; ASHA visits" android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" android:tint="@color/accent"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Next Event Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardNextEvent"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/accent_surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📅" android:textSize="28sp" android:layout_marginEnd="12dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Next Event" android:textSize="12sp" android:textColor="@color/accent" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvNextEvent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginTop="2dp"/>
+                        <TextView android:id="@+id/tvNextEventDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Profile Card -->
+            <androidx.cardview.widget.CardView android:id="@+id/cardProfile"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" android:clickable="true" android:focusable="true"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="4dp" android:layout_height="48dp"
+                        android:background="@color/night_color" android:layout_marginEnd="14dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤" android:textSize="32sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Medical Profile" android:textSize="17sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Your health card for doctors &amp; ASHA workers" android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" android:tint="@color/night_color"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SOS Button -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp" app:cardElevation="6dp" app:cardBackgroundColor="@color/sos_red">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="18dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🚨" android:textSize="34sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="EMERGENCY SOS" android:textSize="20sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Instant call + SMS to emergency contact" android:textSize="13sp" android:textColor="#CCFFFFFF" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <Button android:id="@+id/btnSOS"
+                        android:layout_width="wrap_content" android:layout_height="44dp"
+                        android:text="Open" android:textSize="14sp"
+                        android:backgroundTint="#FFFFFF"
+                        android:textColor="@color/sos_red"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

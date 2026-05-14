@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arogya Sahaya</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_pills">Medicines</string>
+    <string name="tab_vitals">Vitals</string>
+    <string name="tab_asha">ASHA</string>
+    <string name="tab_sos">SOS</string>
+    <string name="tab_voice">AI Help</string>
+</resources>
