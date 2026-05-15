@@ -62,3 +62,6 @@ google-services.json
 
 # Jetifier
 jetifier.lock
+
+# Ignore local GitHub upgrade tool artifacts
+.github/java-upgrade/
