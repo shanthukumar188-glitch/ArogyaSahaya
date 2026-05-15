@@ -1,0 +1,11 @@
+* text=auto
+*.gradle text
+*.kt text
+*.kts text
+*.xml text
+*.yaml text
+*.yml text
+*.md text
+.gradle/** binary
+build/** binary
+ArogyaSahayaV2/gradle/wrapper/gradle-wrapper.jar binary
